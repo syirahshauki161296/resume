@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div class="col-xs-12">
+    <center>
+        Rating scale for skills: 
+    <span class="glyphicon glyphicon-star" style="color:red">
+        BEGINNER
+    </span>
+    <span class="glyphicon glyphicon-star" style="color:orange">
+        INTERMEDIATE
+    </span>
+    <span class="glyphicon glyphicon-star" style="color:green">
+        ADVANCED
+    </span>
+    </center>
+    
+    <ul class="list-group">
+        <li ng-repeat="skill in skillGroupList| orderBy: 'skill'" class="list-group-item text-center clearfix">
+            <span style="font-weight: bold; font-size:16px">{{skill.desc}}</span>
+            <div ng-if="skill.scale === 1">
+                <span class="glyphicon glyphicon-star" style="color:red">
+                </span>
+            </div>
+            <div ng-if="skill.scale === 2">
+                <span class="glyphicon glyphicon-star" style="color:orange">
+                </span>
+            </div>
+            <div ng-if="skill.scale === 3">
+                <span class="glyphicon glyphicon-star" style="color:green">
+                </span>
+            </div>
+        </li>
+    </ul>
+</div>

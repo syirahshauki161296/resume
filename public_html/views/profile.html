@@ -1,0 +1,12 @@
+<div class="col-xs-12">
+    <div ng-click="getList()" style="margin-bottom: 10px; background-color: gray" class="btn btn-primary btn-lg btn-block">
+        <span class="glyphicon 	glyphicon glyphicon-user"></span>
+        PROFILE
+    </div>
+    <ul class="list-group">
+        <li ng-repeat="list in groupList" class="list-group-item text-center clearfix">
+
+<a ng-click="changePage(list.code)" style="font-weight: bold; font-size: 20px; color: gray " >{{list.desc | uppercase}}</a><br>
+        </li>
+    </ul>
+</div>
